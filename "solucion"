@@ -1,4 +1,4 @@
-sudo fuser -vki /var/lib/dpkg/lock
+yes | sudo fuser -vki /var/lib/dpkg/lock
 sudo rm -fr /var/lib/dpkg/lock
 sudo rm -fr /var/lib/apt/lists/lock
 sudo rm -fr /var/cache/apt/archives/lock
