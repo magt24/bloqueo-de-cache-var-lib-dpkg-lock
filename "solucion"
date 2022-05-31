@@ -1,10 +1,3 @@
-#Explica una manera mejor:
 #https://phoenixnap.com/kb/fix-could-not-get-lock-error-ubuntu#:~:text=4%3A%20Delete%20Lock%20Files,-The%20error%20message&text=These%20are%20lock%20files%2C%20which,files%20at%20your%20own%20risk.&text=Removing%20these%20files%20should%20fix%20the%20error.
 
-#These are lock files, which are created to prevent two instances of apt or dpkg from using the same files at the same time. This can happen if an installation is interrupted or did not complete. Remove the lock files at your own risk.
-#Manera no recomendada:
-yes | sudo fuser -vki /var/lib/dpkg/lock
-sudo rm -fr /var/lib/dpkg/lock
-sudo rm -fr /var/lib/apt/lists/lock
-sudo rm -fr /var/cache/apt/archives/lock
-sudo dpkg --configure -a
+# Vi que no es bueno matar el proceso dpkg ni borrar sus ficheros así que supongo que solo se puede reiniciar o esperar que acabe de descargar actualizaciones
