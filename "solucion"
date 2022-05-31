@@ -1,3 +1,5 @@
+#https://bytexd.com/how-to-fix-could-not-get-lock/
+#Manera bruta de hacerlo:
 yes | sudo fuser -vki /var/lib/dpkg/lock
 sudo rm -fr /var/lib/dpkg/lock
 sudo rm -fr /var/lib/apt/lists/lock
